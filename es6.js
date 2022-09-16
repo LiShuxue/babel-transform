@@ -125,5 +125,11 @@ class Test2 extends Test {
   }
 }
 
+// 编译JSX，@babel/plugin-syntax-jsx
+const jsx = () => {
+  return <div></div>
+}
+jsx()
+
 // export
 export default Test;

@@ -1,6 +1,6 @@
 module.exports = {
   sourceType: 'unambiguous', // 自动推测源文件的类型
-  plugins: ['@babel/plugin-transform-runtime'], // 导入@babel/runtime中的辅助函数
+  plugins: ['@babel/plugin-syntax-jsx', '@babel/plugin-transform-runtime'], // 导入@babel/runtime中的辅助函数
   presets: [
     [
       '@babel/preset-env', 
