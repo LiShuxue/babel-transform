@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "babel-es": "babel ./es6.js --config-file ./babel.config.es6.js --out-file ./dist/es6-compiled.js",
-    "babel-ts": "babel ./typescript.ts --config-file ./babel.config.ts.js --out-file ./dist/ts-compiled.js"
+    "babel-ts": "babel ./typescript.ts --config-file ./babel.config.ts.js --out-file ./dist/ts-compiled.js",
+    "build-es": "yarn babel-es && browserify ./dist/es6-compiled.js -o ./dist/es6-browser.js",
+    "build-ts": "yarn babel-ts && browserify ./dist/ts-compiled.js -o ./dist/ts-browser.js"
   },
   "dependencies": {
     "@babel/cli": "^7.18.10",
@@ -16,6 +18,7 @@
     "@babel/preset-env": "^7.19.0",
     "@babel/preset-typescript": "^7.18.6",
     "@babel/runtime-corejs3": "^7.19.0",
-    "@babel/traverse": "^7.19.1"
+    "@babel/traverse": "^7.19.1",
+    "browserify": "^17.0.0"
   }
 }

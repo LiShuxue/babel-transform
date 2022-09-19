@@ -48,9 +48,11 @@ const obj = {
 Object.is("a", obj);
 
 // 链式写法
-const message = {};
-const firstName = message?.body?.user?.firstName || "default";
-const headerText = message.settings.headerText ?? "Hello, world!";
+const message = null;
+const firstName = message?.body?.user?.firstName || "firstName";
+const headerText = message ?? "headerText";
+console.log(firstName)
+console.log(headerText)
 
 // Symbol
 let s = Symbol("s");

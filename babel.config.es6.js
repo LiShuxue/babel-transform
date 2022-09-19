@@ -8,12 +8,5 @@ module.exports = {
       }
     ]
   ], 
-  presets: [
-    [
-      '@babel/preset-env', 
-      {
-        modules: false, // 是否把ES6的模块化语法改成其它模块化语法，默认import都被转码成require，设置成false不转换
-      }
-    ]
-  ],
+  presets: ['@babel/preset-env'],
 };
