@@ -168,18 +168,18 @@ class NewClass implements MyInterfaceForClass {
     b = 'b';
     c = 'c';
     d = 'd';
-    fn = (d) => {
+    fn = (d: any) => {
         console.log(d);
     }
 }
 
 // 接口继承
 interface Alarm {
-    alert()
+    alert: () => void
 }
 interface LightableAlarm extends Alarm {
-    lightOn()
-    lightOff()
+    lightOn: () => void
+    lightOff: () => void
 }
 
 // 泛型

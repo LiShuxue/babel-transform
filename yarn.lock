@@ -2662,6 +2662,11 @@ typedarray@^0.0.6:
   resolved "http://r.npm.sankuai.com/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typescript@^4.8.3:
+  version "4.8.3"
+  resolved "http://r.npm.sankuai.com/typescript/download/typescript-4.8.3.tgz#d59344522c4bc464a65a730ac695007fdb66dd88"
+  integrity sha1-1ZNEUixLxGSmWnMKxpUAf9tm3Yg=
+
 umd@^3.0.0:
   version "3.0.3"
   resolved "http://r.npm.sankuai.com/umd/download/umd-3.0.3.tgz#aa9fe653c42b9097678489c01000acb69f0b26cf"

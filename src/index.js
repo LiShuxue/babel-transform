@@ -2,7 +2,7 @@
 const fs = require('fs')
 const babel = require('@babel/core');
 const traverse = require('@babel/traverse').default;
-const esFilePath = '/Users/lishuxue/Documents/study/babel-transform/es6.js';
+const esFilePath = '/Users/lishuxue/Documents/study/babel-transform/src/es6.js';
 const esCode = fs.readFileSync(esFilePath, 'utf8');
 
 const options = {
