@@ -30,13 +30,13 @@ let str2 = 'this is string'
 //     }
 // }
 function getLength2(something: string | number) {
-    if ((<string>something).length) {  // 报错
-        return (<string>something).length; // 报错
+    if ((<string>something).length) { 
+        return (<string>something).length; 
     }
 }
 
 // 引用类型，对象，数组，函数
-// 接口定义对象
+// 接口定义对象，缺点是鼠标移到类型上面，没有具体提示
 interface Person {
     name: string;
     age?: number;
@@ -46,7 +46,7 @@ let p1: Person = {
     name: 'tom',
     age: 23
 }
-// type定义对象
+// type定义对象，鼠标移到类型上面，有具体提示
 type Person2 = {
     name: string;
     age?: number;
@@ -57,13 +57,13 @@ let p2: Person2 = {
     age: 23
 }
 
-// 一般type指类型别名，主要用来定义联合类型和元祖，其他的对象，函数的声明用interface
+// 建议项目中都使用 type
 
 // 定义数组
 let arr: number[] = [1, 2, 3]
 let arr2: Array<number> = [1, 2, 3]
-// 使用接口定义数组
-interface NumberArray {
+// 使用type定义数组
+type NumberArray = {
     [index: number]: number // 数组下标是number， 值也是number
 }
 let arr3: NumberArray = [1, 2, 3]
@@ -82,15 +82,15 @@ let myAdd = (x: number, y: number): number => {
     return x + y; 
 }
 
-// 接口定义函数
-interface myFun {
+// type定义函数
+type myFun = {
     (a: boolean, b: boolean): boolean
 }
 const myfun: myFun = (a, b) => {
     return a && b
 }
 
-// 元祖：用来存不同类型的对象
+// 元祖：用来存不同类型的数组
 let tuple: [string, number];
 // tuple = [7]; // 报错
 // tuple = ['str']; // 报错
@@ -190,8 +190,8 @@ function logFn<T>(arg: T): T {
 function swapFn<T, U>(tuple: [T, U]): [U, T] {
     return [tuple[1], tuple[0]];
 }
-// 泛型接口
-interface GenericFn {
+// 泛型type
+type GenericFn = {
     <T>(arg: T): T
 }
 const fn: GenericFn = (arg) => {
